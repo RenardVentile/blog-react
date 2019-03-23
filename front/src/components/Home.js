@@ -1,10 +1,11 @@
 import React, {Component} from "react";
+import {Button} from "reactstrap";
 
 class Home extends Component {
     render() {
         return (
             <div>
-            	<p>Bienvenu sur le blog d'Evalentin</p>
+            	<p>Bienvenue sur le blog d'Evalentin</p>
             </div>
         )
     }
