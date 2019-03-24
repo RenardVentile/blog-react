@@ -1,49 +1,65 @@
 import React, { Component } from "react";
-// import {NavLink} from "react-router-dom";
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
+import { NavLink } from "react-router-dom";
+import SideNav, {
+  Toggle,
   Nav,
   NavItem,
-  NavLink
-} from "reactstrap";
+  NavIcon,
+  NavText
+} from "@trendmicro/react-sidenav";
+
+// Be sure to include styles at some point, probably during your bootstraping
+import "@trendmicro/react-sidenav/dist/react-sidenav.css";
 
 class Header extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isOpen: false
-    };
-
-    this.toggle = this.toggle.bind(this);
-  }
-
-  toggle() {
-    this.setState({
-      isOpen: !this.state.isOpen
-    });
+  showSettings(event) {
+    event.preventDefault();
   }
 
   render() {
     return (
-      <div>
-        <Navbar color="danger" dark expand="md">
-          <NavbarBrand href="/">reactstrap</NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="/page1">Page 1</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/page2">Page 2</NavLink>
-              </NavItem>
-            </Nav>
-          </Collapse>
-        </Navbar>
-      </div>
+      <SideNav
+        onSelect={selected => {
+          // Add your code here
+        }}
+      >
+        <SideNav.Toggle />
+        <SideNav.Nav defaultSelected="home">
+          <NavItem eventKey="home">
+            <NavIcon>
+              <i className="fa fa-fw fa-home" style={{ fontSize: "1.75em" }} />
+            </NavIcon>
+            <NavText><NavLink to="/">Home</NavLink></NavText>
+          </NavItem>
+          <NavItem>
+            <NavIcon>
+              <i className="fa fa-fw fa-home" style={{ fontSize: "1.75em" }} />
+            </NavIcon>
+            <NavText><NavLink to="/page1">Page 1</NavLink></NavText>
+          </NavItem>
+          <NavItem>
+            <NavIcon>
+              <i className="fa fa-fw fa-home" style={{ fontSize: "1.75em" }} />
+            </NavIcon>
+            <NavText><NavLink to="/page2">Page 2</NavLink></NavText>
+          </NavItem>
+          <NavItem eventKey="charts">
+            <NavIcon>
+              <i
+                className="fa fa-fw fa-line-chart"
+                style={{ fontSize: "1.75em" }}
+              />
+            </NavIcon>
+            <NavText>Charts</NavText>
+            <NavItem eventKey="charts/linechart">
+              <NavText>Line Chart</NavText>
+            </NavItem>
+            <NavItem eventKey="charts/barchart">
+              <NavText>Bar Chart</NavText>
+            </NavItem>
+          </NavItem>
+        </SideNav.Nav>
+      </SideNav>
     );
   }
 }
