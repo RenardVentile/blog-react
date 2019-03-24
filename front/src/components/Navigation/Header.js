@@ -7,7 +7,7 @@ import SideNav, { NavItem, NavIcon, NavText } from "@trendmicro/react-sidenav";
 import Home from "../Pages/Home";
 import FrontEndPage from "../Pages/FrontEndPage";
 import BackEndPage from "../Pages/BackEndPage";
-import GraphismPage from "../Pages/GraphismePage";
+import GraphismPage from "../Pages/GraphismPage";
 import TypographyPage from "../Pages/TypographyPage";
 import IllustrationPage from "../Pages/IllustrationPage";
 import TattooPage from "../Pages/TattooPage";
