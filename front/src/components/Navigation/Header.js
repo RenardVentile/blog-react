@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
-import SideNav, { NavItem, NavIcon, NavText } from "@trendmicro/react-sidenav";
 import "@trendmicro/react-sidenav/dist/react-sidenav.css";
-
+import './header.css';
+import SideNav, { NavItem, NavIcon, NavText } from "@trendmicro/react-sidenav";
 import Home from "../Home";
 import Page1 from "../Page1";
 import Page2 from "../Page2";
@@ -14,7 +14,7 @@ class Header extends Component {
         render={({ location, history }) => (
           <React.Fragment>
             <SideNav
-              style={{ background: "black" }}
+              style={{ background: 'black' }}
               onSelect={selected => {
                 const to = "/" + selected;
                 if (location.pathname !== to) {
