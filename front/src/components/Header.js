@@ -8,20 +8,15 @@ import SideNav, {
   NavText
 } from "@trendmicro/react-sidenav";
 
-// Be sure to include styles at some point, probably during your bootstraping
 import "@trendmicro/react-sidenav/dist/react-sidenav.css";
 
 class Header extends Component {
-  showSettings(event) {
-    event.preventDefault();
-  }
-
   render() {
     return (
       <SideNav
         onSelect={selected => {
           // Add your code here
-        }}
+				}}
       >
         <SideNav.Toggle />
         <SideNav.Nav defaultSelected="home">
