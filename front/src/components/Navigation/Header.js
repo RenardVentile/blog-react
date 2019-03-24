@@ -1,12 +1,17 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
+import ClickOutside from "react-click-outside";
 import "@trendmicro/react-sidenav/dist/react-sidenav.css";
 import "./header.css";
 import SideNav, { NavItem, NavIcon, NavText } from "@trendmicro/react-sidenav";
-import Home from "../Home";
-import Page1 from "../Page1";
-import Page2 from "../Page2";
-import ClickOutside from "react-click-outside";
+import Home from "../Pages/Home";
+import FrontEndPage from "../Pages/FrontEndPage";
+import BackEndPage from "../Pages/BackEndPage";
+import GraphismPage from "../Pages/GraphismePage";
+import TypographyPage from "../Pages/TypographyPage";
+import IllustrationPage from "../Pages/IllustrationPage";
+import TattooPage from "../Pages/TattooPage";
+import PhotographyPage from "../Pages/PhotographyPage";
 
 class Header extends Component {
   constructor(props) {
@@ -49,7 +54,7 @@ class Header extends Component {
                     </NavIcon>
                     <NavText>Home</NavText>
                   </NavItem>
-                  <NavItem eventKey="page2">
+                  <NavItem eventKey="web">
                     <NavIcon>
                       <i
                         className="fa fa-fw fa-laptop-code"
@@ -57,14 +62,14 @@ class Header extends Component {
                       />
                     </NavIcon>
                     <NavText>Web</NavText>
-                    <NavItem eventKey="charts/linechart">
+                    <NavItem eventKey="web/front-end">
                       <NavText>Front-end</NavText>
                     </NavItem>
-                    <NavItem eventKey="charts/linechart">
+                    <NavItem eventKey="web/back-end">
                       <NavText>Back-end</NavText>
                     </NavItem>
                   </NavItem>
-                  <NavItem eventKey="page1">
+                  <NavItem eventKey="graphisme">
                     <NavIcon>
                       <i
                         className="fa fa-fw fa-pencil-ruler"
@@ -73,7 +78,7 @@ class Header extends Component {
                     </NavIcon>
                     <NavText>Graphisme</NavText>
                   </NavItem>
-                  <NavItem eventKey="page2">
+                  <NavItem eventKey="typographie">
                     <NavIcon>
                       <i
                         className="fa fa-fw fa-font"
@@ -82,7 +87,7 @@ class Header extends Component {
                     </NavIcon>
                     <NavText>Typographie</NavText>
                   </NavItem>
-                  <NavItem eventKey="page2">
+                  <NavItem eventKey="illustration">
                     <NavIcon>
                       <i
                         className="fa fa-fw fa-pencil-alt"
@@ -91,7 +96,7 @@ class Header extends Component {
                     </NavIcon>
                     <NavText>Illustration</NavText>
                   </NavItem>
-                  <NavItem eventKey="page2">
+                  <NavItem eventKey="tatouage">
                     <NavIcon>
                       <i
                         className="fa fa-fw fa-syringe"
@@ -100,7 +105,7 @@ class Header extends Component {
                     </NavIcon>
                     <NavText>Tatouage</NavText>
                   </NavItem>
-                  <NavItem eventKey="page2">
+                  <NavItem eventKey="photographie">
                     <NavIcon>
                       <i
                         className="fa fa-fw fa-camera"
@@ -114,8 +119,13 @@ class Header extends Component {
             </ClickOutside>
             <main>
               <Route path="/" exact component={Home} />
-              <Route path="/page1" component={Page1} />
-              <Route path="/page2" component={Page2} />
+              <Route path="/web/front-end" component={FrontEndPage} />
+              <Route path="/web/back-end" component={BackEndPage} />
+              <Route path="/graphisme" component={GraphismPage} />
+              <Route path="/typographie" component={TypographyPage} />
+              <Route path="/illustration" component={IllustrationPage} />>
+              <Route path="/tatouage" component={TattooPage} />
+              <Route path="/photographie" component={PhotographyPage} />
             </main>
           </React.Fragment>
         )}

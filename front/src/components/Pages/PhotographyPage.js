@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "reactstrap";
 
-class Page1 extends Component {
+class PhotographyPage extends Component {
   render() {
     return (
       <Container>
         <Row>
           <Col>
-            <p>Coucou 1</p>
+            <p>Catégorie Photographie</p>
           </Col>
         </Row>
       </Container>
@@ -15,4 +15,4 @@ class Page1 extends Component {
   }
 }
 
-export default Page1;
+export default PhotographyPage;
