@@ -19,6 +19,7 @@ class Header extends Component {
         render={({ location, history }) => (
           <React.Fragment>
             <SideNav
+						style={{background:'black'}}
               onSelect={selected => {
                 const to = "/" + selected;
                 if (location.pathname !== to) {
