@@ -12,6 +12,7 @@ import TypographyPage from "../Pages/TypographyPage";
 import IllustrationPage from "../Pages/IllustrationPage";
 import TattooPage from "../Pages/TattooPage";
 import PhotographyPage from "../Pages/PhotographyPage";
+import TemplatePost from "../TemplatePost"
 
 class Header extends Component {
   constructor(props) {
@@ -126,6 +127,7 @@ class Header extends Component {
               <Route path="/illustration" component={IllustrationPage} />>
               <Route path="/tatouage" component={TattooPage} />
               <Route path="/photographie" component={PhotographyPage} />
+              <Route path='/template-post' component={TemplatePost} />
             </main>
           </React.Fragment>
         )}
